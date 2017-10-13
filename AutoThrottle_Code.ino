@@ -7,7 +7,7 @@ int timer = 0;
 int pos = 0;
 boolean stat = true;
 
-//Servo variable
+//Servo Variable
 Servo myservo;
 
 //DC Motor - Digital Pin 3
@@ -39,7 +39,7 @@ void loop()
   if (timer == 61)
   {
     rpm = (counter / 60);
-    if (rpm > 0.08 && stat == true) //imitates 35km/hr
+    if (rpm > 0.08 && stat == true)   //imitates 35km/hr
     {
       analogWrite(motorPin, 30);       //reduces speed in the motor
       Serial.println("ENGINE OFF");    //prints ENGINE OFF
